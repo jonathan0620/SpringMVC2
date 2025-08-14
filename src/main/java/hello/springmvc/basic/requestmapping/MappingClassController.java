@@ -13,27 +13,41 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/mapping/users")
 public class MappingClassController {
 
-
+    /**
+     * GET /mapping/users
+     */
     @GetMapping
     public String user() {
         return "get users";
     }
 
+    /**
+     * POST /mapping/users
+     */
     @PostMapping
     public String addUser() {
         return "post user";
     }
 
+    /**
+     * GET /mapping/users/{userId}
+     */
     @GetMapping("/{userId}")
     public String findUser(@PathVariable String userID) {
         return "get userID =" + userID;
     }
 
+    /**
+     * PATCH /mapping/users/{userId}
+     */
     @GetMapping("/{userId}")
     public String updateUser(@PathVariable String userID) {
         return "update userID =" + userID;
     }
 
+    /**
+     * DELETE /mapping/users/{userId}
+     */
     @GetMapping("/{userId}")
     public String deleteUser(@PathVariable String userID) {
         return "delete userID =" + userID;
