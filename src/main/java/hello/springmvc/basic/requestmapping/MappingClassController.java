@@ -33,23 +33,23 @@ public class MappingClassController {
      * GET /mapping/users/{userId}
      */
     @GetMapping("/{userId}")
-    public String findUser(@PathVariable String userID) {
+    public String findUser(@PathVariable("userID") String userID) {
         return "get userID =" + userID;
     }
 
     /**
      * PATCH /mapping/users/{userId}
      */
-    @GetMapping("/{userId}")
-    public String updateUser(@PathVariable String userID) {
+    @PatchMapping("/{userId}")
+    public String updateUser(@PathVariable("userID") String userID) {
         return "update userID =" + userID;
     }
 
     /**
      * DELETE /mapping/users/{userId}
      */
-    @GetMapping("/{userId}")
-    public String deleteUser(@PathVariable String userID) {
+    @DeleteMapping("/{userId}")
+    public String deleteUser(@PathVariable("userID") String userID) {
         return "delete userID =" + userID;
     }
 }
